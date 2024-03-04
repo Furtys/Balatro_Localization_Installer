@@ -52,7 +52,7 @@ Thanks to :
 
 ### Windows
 1. **Close Balatro**
-2. Download the file Balatro_Localization_Installer_Windows.cmd](https://github.com/Furtys/Balatro_Localization_Installer/blob/main/Balatro_Localization_Installer_Windows.cmd) (`Ctrl`+`Shift`+`S`)
+2. Download the file [Balatro_Localization_Installer_Windows.cmd](https://github.com/Furtys/Balatro_Localization_Installer/blob/main/Balatro_Localization_Installer_Windows.cmd) (`Ctrl`+`Shift`+`S`)
 3. Double click on the file `Balatro_Localization_Installer_Windows.cmd`. 
 4. If Steam is not installed in `C:\Program Files (x86)\Steam`, programm ask you to select Balatro.exe file's location.
 5. The script automatically downloads and installs the latest version of Balamod and the latest translation file.
