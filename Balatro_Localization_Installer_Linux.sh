@@ -62,9 +62,9 @@ download_fr_lua() {
 inject_file() {
     # Vérifie si le fichier balamod-linux existe
     if [ -e "${dossier_ressources}/${balamod_linux_file}" ] && [ -e "${dossier_ressources}/fr.lua" ]; then
-            echo "========================================="
-            echo "=== Installation du fichier de langue ==="
-            echo "========================================="
+        echo "========================================="
+        echo "=== Installation du fichier de langue ==="
+        echo "========================================="
         ./$dossier_ressources/$balamod_linux_file -x -i $dossier_ressources/fr.lua -o localization/fr.lua
     else
         echo "Le fichier ${balamod_linux_file} n'a pas été trouvé. Une erreur lors du téléchargement a du se produire."
