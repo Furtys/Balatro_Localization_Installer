@@ -3,8 +3,6 @@
 
 @echo off
 setlocal enabledelayedexpansion
-:: Permet l'utilisation des caractères accentués.
-chcp 65001>nul
 
 set "colorReset=[0m"
 set "resourcesFolder=Balatro_Localization_Resources"
@@ -20,8 +18,8 @@ set "steamLibraryFile=C:\Program Files (x86)\Steam\steamapps\libraryfolders.vdf"
 if not exist "!steamLibraryFile!" (
     :: S'il n'existe pas, on doit demander à l'utilisateur de sélectionner le fichier Balatro.exe lui même.
     echo ==========================================
-    echo ==   Steam n'est pas installé dans C:   ==
-    echo ==  Merci de bien vouloir sélectionner  ==
+    echo ==   Steam n'est pas installe dans C:   ==
+    echo ==  Merci de bien vouloir selectionner  ==
     echo ==        le fichier Balatro.exe        ==
     echo ==========================================
     
@@ -36,7 +34,7 @@ if not exist "!steamLibraryFile!" (
         set "balatroFile=!selectedFile!"
         echo Balatro.exe selectionne : !balatroFile!
     ) else (
-        echo == Fichier Balatro.exe non sélectionné  ==
+        echo == Fichier Balatro.exe non selectionne  ==
         echo ==========================================
         goto :fin
     )
@@ -56,29 +54,29 @@ set "FR_translationUrl=https://raw.githubusercontent.com/FrBmt-BIGetNouf/balatro
 :: Si le fichier balamod n'existe pas on le télécharge.
 if not exist "%resourcesFolder%\%balamodFile%" (
     echo =========================================
-    echo ==      Téléchargement de Balamod      ==
+    echo ==      Telechargement de Balamod      ==
     echo =========================================
 
     curl -L -o "%resourcesFolder%\%balamodFile%" %balamodFileUrl%
 
     echo =========================================
-    echo ==       Téléchargement terminé.       ==
+    echo ==       Telechargement termine.       ==
     echo =========================================
 ) else (
     echo =========================================
-    echo ==        Balamod à jour trouvé        ==
+    echo ==        Balamod a jour trouve        ==
     echo =========================================
 )
 
 :: On télécharge tout le temps la traduction française.
 echo =========================================
-echo == Téléchargement du fichier de langue ==
+echo == Telechargement du fichier de langue ==
 echo =========================================
 
 curl -L -o "%resourcesFolder%\fr.lua" %FR_translationUrl%
 
 echo =========================================
-echo ==       Téléchargement terminé.       ==
+echo ==       Telechargement termine.       ==
 echo =========================================
 
 :: Execution de l'injection du fichier de langue.
@@ -97,7 +95,7 @@ if not defined balatroFile (
 
 
 echo %colorReset%=========================================
-echo ==        Installation terminée        ==
+echo ==        Installation terminee        ==
 echo =========================================
 
 :: Suppression des fichiers ressources si l'utilisateur veut.
